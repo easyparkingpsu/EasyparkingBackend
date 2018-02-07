@@ -10,7 +10,7 @@ MongoClient.connect(MONGO_URL, (err, db) => {
   // Do something with db here, like inserting a record
   db.collection('notes').insertOne(
     {
-      title: 'Hello MongoDB',
+      title: 'Hello MongoDB2 Test git',
       text: 'Hopefully this works!'
     },
     function (err, res) {
