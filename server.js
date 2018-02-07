@@ -11,4 +11,4 @@ app.use(bodyParser.json());
 app.use('/api', require('./routes/api'));
 
 app.listen(3000);
-console.log('Server is running');
+console.log('Server is running' + listeners.address().port);
