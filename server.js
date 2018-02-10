@@ -10,5 +10,5 @@ app.use(bodyParser.json());
 
 app.use('/api', require('./routes/api'));
 
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
 console.log('Server is running');
