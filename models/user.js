@@ -3,10 +3,12 @@ var mongoose = restful.mongoose;
 
 var user = new mongoose.Schema({
     firstname: String,
-    surname: String,
+    lastname: String,
     idnumber: Number,
-    tel: String
+    tel: String,
+    email: String,
+    password: String
 
 });
 
-module.exports = restful.model('tblusers', user);
+module.exports = restful.model('users', user);
