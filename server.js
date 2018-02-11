@@ -10,5 +10,9 @@ app.use(bodyParser.json({type:'application/json; charset=utf-8'}));
 
 app.use('/api', require('./routes/api'));
 
+app.use(function(err, req, res, next){
+    res.status(422).send({errot: err.message})
+});
+
 app.listen(process.env.PORT || 5000);
 console.log('Server is running');
