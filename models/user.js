@@ -4,9 +4,15 @@ var mongoose = restful.mongoose;
 var user = new mongoose.Schema({
     firstname: String,
     lastname: String,
-    idnumber: Number,
+    idnumber:{
+        type: Number,
+        unique: true
+    },
     tel: String,
-    email: String,
+    email: {
+        type: String,
+        unique: true
+    },
     password: String
 
 });
