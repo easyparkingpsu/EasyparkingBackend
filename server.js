@@ -6,7 +6,7 @@ mongoose.connect('mongodb://admin:admin@ds046367.mlab.com:46367/ezparkingpsu');
 
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+app.use(bodyParser.json({type:'application/json; charset=utf-8'}));
 
 app.use('/api', require('./routes/api'));
 
